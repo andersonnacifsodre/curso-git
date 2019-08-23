@@ -7,6 +7,7 @@ namespace matriz
         static void Main(string[] args)
         {
             int som = 0;
+            int som1 = 0;
             Console.WriteLine("Entre com o numero de linhas e colunas de uma matriz");
             int n = int.Parse(Console.ReadLine());
 
@@ -45,8 +46,25 @@ namespace matriz
                 }
 
             }
+
+            Console.WriteLine();
+            Console.Write("Numero(s) Positivo: ");
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    if (mat[i, j] > 0)
+                    {
+
+                        Console.Write(mat[i, j] + ", ");
+                        som1++;
+                    }
+                }
+
+            }
             Console.WriteLine();
             Console.WriteLine("Foram encontrados " + som + " número(s) negativo.");
+            Console.WriteLine("Foram encontrados " + som1 + " número(s) Positivo.");
             Console.WriteLine(DateTime.Now);
         }
     }
